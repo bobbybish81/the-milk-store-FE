@@ -1,0 +1,38 @@
+.card-article {
+  height: 300px;
+  width: 300px;
+  border: 1px solid #d7d6d6;
+  border-radius: 10px;
+  margin: 1rem auto;
+  overflow: hidden;
+  color: #000;
+}
+.card-article .card-article-img {
+  height: 200px;
+  background-color: #f8f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-article .card-article-img .milk-img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.card-article .card-body {
+  background-color: #fff;
+  height: 100px;
+}
+.card-article .card-body .card-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card-article .card-body .card-detail p {
+  margin: 10px 0 0 0;
+}
+.card-article .card-body .card-detail .storage {
+  font-weight: 700;
+  font-style: italic;
+  color: #CA95A7;
+}/*# sourceMappingURL=Card.css.map */
