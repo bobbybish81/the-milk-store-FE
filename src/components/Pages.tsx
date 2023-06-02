@@ -3,7 +3,7 @@ import '../styles/Pages.scss';
 interface PageProps {
   totalPages: number,
   currentPage: number, 
-  setCurrentPage: (number:number) => number,
+  setCurrentPage: (number:number) => void,
 }
 
 const Pages = ({totalPages, currentPage, setCurrentPage}: PageProps) => {
