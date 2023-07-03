@@ -1,5 +1,9 @@
 .searchbar {
-  width: 1000px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .refresh {
@@ -8,26 +12,50 @@
 }
 
 .product-count {
-  width: 1000px;
-  padding: 0 15px;
-  margin: 20px auto;
+  text-align: center;
   font-weight: 700;
 }
 
 .gallery {
-  width: 1000px;
-  min-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .pagination {
-  width: 1000px;
   height: 6rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
+
+@media only screen and (min-width: 980px) {
+
+  .searchbar {
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .input-group {
+    width: 50%;
+  }
+
+  .product-count {
+    width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .gallery {
+    width: 1000px;
+    min-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pagination {
+    width: 1000px;
+  }
+}/*# sourceMappingURL=Card.css.map */

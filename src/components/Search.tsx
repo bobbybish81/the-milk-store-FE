@@ -14,9 +14,10 @@ interface SearchProps {
 const Search = ({ setQuery, setCurrentPage, milkTypes } : SearchProps) => {
 
   return (
-    <Navbar className='justify-content-center align-items-end' style={{height: '100px'}}>
+    
+    <Navbar>
       <Nav className='searchbar justify-content-between'>
-        <InputGroup style={{width: '40%'}}>
+        <InputGroup className='input-group'>
           <InputGroup.Text id='basic-addon1'>
             <IoSearchOutline/>
           </InputGroup.Text>

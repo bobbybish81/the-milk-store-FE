@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 32px;
+  padding: 8px 12px;
   background-color: #CA95A7;
 }
 
 .footer-text {
   width: 40%;
-  font-size: 15px;
+  font-size: 13px;
   color: #670a35;
   margin: 0;
 }
@@ -22,7 +22,18 @@
 }
 
 .footer-link {
-  text-decoration: underline;
+  font-weight: 700;
   margin-left: 4px;
   color: #670a35;
+}
+
+@media only screen and (min-width: 980px) {
+  .footer {
+    padding: 8px 32px;
+  }
+
+  .footer-text {
+    font-size: 15px;
+    width: 40%;
+  }
 }
