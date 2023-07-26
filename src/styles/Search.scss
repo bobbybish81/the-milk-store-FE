@@ -1,0 +1,18 @@
+.mobile-filter {
+  display: block;
+}
+
+.desktop-filter {
+  display: none;
+}
+
+@media only screen and (min-width: 980px) {
+
+  .mobile-filter {
+    display: none;
+  }
+  .desktop-filter {
+    display: block;
+  }
+
+}

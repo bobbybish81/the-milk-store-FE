@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { IoSearchOutline, IoClose } from 'react-icons/io5';
+import '../styles/Header.scss';
 
 interface SearchProps {
   setQuery: (string:string) => void,
@@ -14,7 +15,7 @@ interface SearchProps {
 const Search = ({ setQuery, setCurrentPage, milkTypes } : SearchProps) => {
 
   return (
-    
+    <>
     <Navbar>
       <Nav className='searchbar justify-content-between'>
         <InputGroup className='input-group'>
@@ -36,7 +37,7 @@ const Search = ({ setQuery, setCurrentPage, milkTypes } : SearchProps) => {
             <IoClose style={{color: 'grey'}}/>
           </InputGroup.Text>
         </InputGroup>
-        <NavDropdown title='Filter' id='basic-nav-dropdown'>
+        <NavDropdown className='desktop-filter' title='Filter' id='basic-nav-dropdown'>
           {milkTypes.map((type, index) => (
             <NavDropdown.Item
               key={index}
@@ -46,6 +47,15 @@ const Search = ({ setQuery, setCurrentPage, milkTypes } : SearchProps) => {
         </NavDropdown>
       </Nav>
     </Navbar>
+    <NavDropdown className='mobile-filter' style={{color: '#000'}} title='Filter' id='basic-nav-dropdown'>
+    {milkTypes.map((type, index) => (
+      <NavDropdown.Item
+        key={index}
+        onClick={()=> {setQuery(type); setCurrentPage(1)}}>{type}</NavDropdown.Item>
+      )
+    )}
+  </NavDropdown>
+  </>
   );
 }
 
