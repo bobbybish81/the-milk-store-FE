@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { IoSearchOutline, IoClose } from 'react-icons/io5';
-import '../styles/Header.scss';
+import '../styles/Search.scss';
 
 interface SearchProps {
   setQuery: (string:string) => void,

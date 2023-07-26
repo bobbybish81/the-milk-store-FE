@@ -1,5 +1,28 @@
+.searchbar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mobile-filter {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.mobile-filter a {
+  color: #928182;
+}
+
+.mobile-filter a:focus {
+  color: #928182;
+}
+
+.dropdown-menu {
+  width: 50%;
 }
 
 .desktop-filter {
@@ -8,9 +31,21 @@
 
 @media only screen and (min-width: 980px) {
 
+  .searchbar {
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .input-group {
+    width: 50%;
+  }
+
   .mobile-filter {
     display: none;
   }
+
   .desktop-filter {
     display: block;
   }
