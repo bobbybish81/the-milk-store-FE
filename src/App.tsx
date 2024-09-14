@@ -37,7 +37,7 @@ const App = () => {
     setData({...data, loading: true})
     const fetchData = async () => {
       // const response = await fetch('https://tan-healthy-cockatoo.cyclic.app/api/milkstore');
-        const response = await fetch('https://thawing-fortress-99103-8662110426e9.herokuapp.com//api/milkstore');
+        const response = await fetch('https://thawing-fortress-99103-8662110426e9.herokuapp.com/api/milkstore');
       try {
         const milkstore = await response.json();
         setData({
