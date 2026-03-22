@@ -7,6 +7,7 @@ import OrderConfirmation from './routes/OrderConfirmation';
 import Footer from './components/Footer';
 import IState from './interfaces/IState';
 import IResults from './interfaces/IResults';
+import milkStoreDB from '../database/milkStore';
 import './styles/App.scss';
 
 const App = () => {
@@ -33,27 +34,34 @@ const App = () => {
     return types;
   }
 
-  useEffect(() => {
-    setData({...data, loading: true})
-    const fetchData = async () => {
-      // const response = await fetch('https://tan-healthy-cockatoo.cyclic.app/api/milkstore');
-        const response = await fetch('https://stormy-castle-73299-e2e84a100816.herokuapp.com/api/milkstore');
-      try {
-        const milkstore = await response.json();
+  // useEffect(() => {
+  //   setData({...data, loading: true})
+  //   const fetchData = async () => {
+  //     const response = await fetch('https://tan-healthy-cockatoo.cyclic.app/api/milkstore');
+  //     try {
+  //       const milkstore = await response.json();
+  //       setData({
+  //         ...data,
+  //         loading: false,
+  //         results: milkstore?.results,
+  //       });
+  //     } catch (error:any) {
+  //       setData({
+  //         ...data,
+  //         loading: false,
+  //         errorMessage: error.message,
+  //       });
+  //     }
+  //   };
+  //   fetchData();
+  // },[])
+
+    useEffect(() => {
         setData({
           ...data,
           loading: false,
-          results: milkstore?.results,
+          results: milkStoreDB?.results,
         });
-      } catch (error:any) {
-        setData({
-          ...data,
-          loading: false,
-          errorMessage: error.message,
-        });
-      }
-    };
-    fetchData();
   },[])
   
   return (
